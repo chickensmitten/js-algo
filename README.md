@@ -18,3 +18,4 @@ Companion repo to [The Coding Inteview Bootcamp: Algorithms + Data Structures](h
 - Math.sign(n)
 - for let in vs for let of
 - use modulo % to check if a number has remainder given a denominator. remainder is also always less than the denominator
+- splice vs slice. splice modifies the original array while slice doesn't
