@@ -27,7 +27,7 @@ function anagrams(stringA, stringB) {
     shortCharMap = charMapA
   }
   for (const char in longCharMap) {
-    if (shortCharMap === undefined || (longCharMap[char] != shortCharMap[char])) {
+    if (shortCharMap === undefined || (longCharMap[char] !== shortCharMap[char])) {
       return false
     }
   }
