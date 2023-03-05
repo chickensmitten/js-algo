@@ -58,3 +58,5 @@ console.log(array1.every(isBelowThreshold));
 - `sort()` don't forget there is sort method for alphabets because it compares sequences of UTF-16 code units values.
 - also learnt that `!=` and `!==` will give very confusing result. This is why TypeScript is required.
 
+**Capitalize**
+- `.slice(1)` means start slicing from second letter onwards until the end. normally we use slice as `.slice(1,5)`. It means start slicing from second letter to sixth letter.
