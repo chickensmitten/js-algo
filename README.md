@@ -12,10 +12,11 @@ Companion repo to [The Coding Inteview Bootcamp: Algorithms + Data Structures](h
   - to exit use ctrl + c
 
 ## Interesting methods
-- reduce()
-- reverse()
-- every()
-- Math.sign(n)
-- for let in vs for let of
-- use modulo % to check if a number has remainder given a denominator. remainder is also always less than the denominator
-- splice vs slice. splice modifies the original array while slice doesn't
+- `reduce()`
+- `reverse()`
+- `every()`
+- `Math.sign(n)`
+- `for let in` is for object, while `for let of` is for array
+- use `modulo` % to check if a number has remainder given a denominator. remainder is also always less than the denominator
+- `splice` vs `slice`. `splice` modifies the original array while `slice` doesn't
+- `sort()` don't forget there is sort method for alphabets
