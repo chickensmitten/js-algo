@@ -19,4 +19,4 @@ Companion repo to [The Coding Inteview Bootcamp: Algorithms + Data Structures](h
 - `for let in` is for object, while `for let of` is for array
 - use `modulo` % to check if a number has remainder given a denominator. remainder is also always less than the denominator
 - `splice` vs `slice`. `splice` modifies the original array while `slice` doesn't
-- `sort()` don't forget there is sort method for alphabets
+- `sort()` don't forget there is sort method for alphabets because it compares sequences of UTF-16 code units values.
