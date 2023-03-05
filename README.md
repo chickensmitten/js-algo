@@ -1,4 +1,4 @@
-# AlgoCasts
+# JS Algo
 Companion repo to [The Coding Inteview Bootcamp: Algorithms + Data Structures](https://www.udemy.com/course/coding-interview-bootcamp-algorithms-and-data-structure/)
 
 ## Run test
@@ -10,3 +10,11 @@ Companion repo to [The Coding Inteview Bootcamp: Algorithms + Data Structures](h
   - press `c` until you hit the code with `debugger;`, then test the code
   - to inspect a variable, we have to enter REPL mode by running `repl`
   - to exit use ctrl + c
+
+## Interesting methods
+- reduce()
+- reverse()
+- every()
+- Math.sign(n)
+- for let in vs for let of
+- use modulo % to check if a number has remainder given a denominator. remainder is also always less than the denominator
