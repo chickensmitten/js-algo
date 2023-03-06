@@ -60,3 +60,30 @@ console.log(array1.every(isBelowThreshold));
 
 **Capitalize**
 - `.slice(1)` means start slicing from second letter onwards until the end. normally we use slice as `.slice(1,5)`. It means start slicing from second letter to sixth letter.
+- `.charAt(0)` returns character of a string based on the index
+- `.toUpperCase()` capitalize the entire string
+
+**Steps**
+- the completed exercises proposes a "column" paradigm to thinking about the code
+- recursion best practice
+  - identify the bare minimum information needed to represent the problem so that it is easy to reason about
+  - avoid infinite recursion with default settings to limit the number of loops
+  - if no work to do end the loop with return
+  - if there is work, call the function and ensure the arguments are changed
+  - example code
+  ```
+  function steps(n, row = 0, stair = '') {
+    if (n === row) {
+      return;
+    }
+
+    if (n === stair.length) {
+      console.log(stair);
+      return steps(n, row + 1);
+    }
+
+    const add = stair.length <= row ? '#' : ' ';
+    steps(n, row, stair + add);
+  }
+  ```
+- use `<char>.repeat(number)` to duplicate character or string with the number

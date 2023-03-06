@@ -17,6 +17,13 @@
 //       '### '
 //       '####'
 
-function steps(n) {}
+function steps(n) {
+  for (i = 0; i < n; i++ ) {
+    let pound_number = i + 1
+    let space_number = n - pound_number
+    let pound = "#".repeat(pound_number) + " ".repeat(space_number)
+    console.log(pound)
+  }
+}
 
 module.exports = steps;
