@@ -28,7 +28,7 @@ const sumWithInitial = array1.reduce(
 console.log(sumWithInitial);
 // Expected output: 10
 ```
-- `reverse()` there is an existing string that reverses.
+- `reverse()` is a helper method to reverse a string.
 
 **Palindrome**
 - `every()` method tests whether all elements in the array pass the test implemented by the provided function. It returns a Boolean value.
@@ -105,4 +105,27 @@ Math.floor(5/2) - 2
 ```
 
 **Vowels**
-- use `.includes()` to check if an element exists in an array
+- use `.includes()` helper method to check if an element exists in an array
+- use regex with `.match()` helper method to check if a string contains the characters that you are looking for.
+```
+const matches = str.match(/[aeiou]/gi);
+return matches ? matches.length : 0;
+```
+
+**Matrix Spiral**
+- ![matrix spiral](/public/16_matrix_spiral.png)
+- Matrix spiral algorithm
+  - First Step
+    - column for `startCol` increases from left to the right, getting closer to `endCol`. 
+    - then shift the `startCol` by one increment
+  - Second Step
+    - then row for `startRow` increases from up to down, getting closer to `endRow`
+    - then shift the `startRow` by one increment
+  - Third Step
+    - column for `endCol` decreases from right to left, getting closer to `startCol`
+    - then shift the `endCol` by one decrement
+  - Fourth Step
+    - column for `endRow` decreases from bottom to top, getting closer to `startRow`
+    - then shift the `endRow` by one drecrement
+  - Repeat steps one to four
+    - continue this loop until `startCol` and `endCol` meets and `startRow` and `endRow` meets
