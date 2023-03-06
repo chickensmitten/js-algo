@@ -87,3 +87,19 @@ console.log(array1.every(isBelowThreshold));
   }
   ```
 - use `<char>.repeat(number)` to duplicate character or string with the number
+
+**Pyramids**
+- first find the relationship between the rows and columns. DO NOT find the relationship between one pyramid with another. The relationship should be contained within the give number. that will help us find the columns. for example, `pyramid(3)` has 5 columns. the algorithm relationship is `2 * n - 1`, `n` being the number of rows.
+- get the midpoint of column with `Math.floor((2*n-1)/2)`, (`Math.floor()` rounds the number down to the nearest integer) then convert the numbers next to it to pounds.
+```
+const columns = [0, 1, 2, 3, 4];
+const row = 1;
+
+Math.floor(5/2)
+Math.floor(5/2) + 1
+Math.floor(5/2) - 1
+
+if const row = 2;
+Math.floor(5/2) + 2
+Math.floor(5/2) - 2
+```
