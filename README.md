@@ -103,3 +103,6 @@ if const row = 2;
 Math.floor(5/2) + 2
 Math.floor(5/2) - 2
 ```
+
+**Vowels**
+- use `.includes()` to check if an element exists in an array
