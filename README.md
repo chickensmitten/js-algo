@@ -139,3 +139,42 @@ return matches ? matches.length : 0;
 
 **Space Complexity**
 - How much more memory is required by doubling the problem set?
+
+**Fibonacci**
+- Simple recursive solution. It means you have seen this solution before. It is testing if you have common knowledge. This is an exponential time solution. For time complexity, it may be better to use iterative solution.
+```
+function fib(n) {
+  if (n < 2) {
+    return n;
+  }
+
+  return fib(n - 1) + fib(n - 2);
+}
+```
+- to reduce time complexity for fibonacci recursive solution, use `memoization`. It stores the arguments of each function call along with the result. If the function is called again with the same arguments, return the precomputed result, rather than running the function again.
+- Generic Memoizer that can be used by any other functions, including Fibonacci Recursive Solution
+```
+function memoize(fn) {
+  const cache = {};
+  return function(...args) {
+    if (cache[args]) {
+      return cache[args];
+    }
+
+    const result = fn.apply(this, args);
+    cache[args] = result;
+
+    return result;
+  };
+}
+
+function fib(n) {
+  if (n < 2) {
+    return n;
+  }
+
+  return fib(n - 1) + fib(n - 2);
+}
+
+fib = memoize(fib);
+```
