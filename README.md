@@ -129,3 +129,13 @@ return matches ? matches.length : 0;
     - then shift the `endRow` by one drecrement
   - Repeat steps one to four
     - continue this loop until `startCol` and `endCol` meets and `startRow` and `endRow` meets
+
+**Runtime Complexity**
+- Describes the performance of an algorithm. How much more processing power/time is required to run your algorithm if we double the inputs?
+- Types of Big O Notations or Runtime Complexity
+![big o notation](/public/15_big_o_notation.png)
+- Tip for Identifying Runtime Complexity
+![tips runtime complexity](/public/15_tips_runtime_complexity.png)
+
+**Space Complexity**
+- How much more memory is required by doubling the problem set?
