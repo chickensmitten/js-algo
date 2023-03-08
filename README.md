@@ -178,3 +178,6 @@ function fib(n) {
 
 fib = memoize(fib);
 ```
+
+**Queue and Weave**
+- Sometimes, it might be a good idea to create a class. For example for `queue`, it is an array that uses FIFO to input characters. To prevent other developers from thinking this is a conventional array and that it is open to all array methods. The scope/function can be limited by creating a `Queue` class with specific methods.
