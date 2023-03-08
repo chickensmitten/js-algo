@@ -185,3 +185,42 @@ fib = memoize(fib);
 
 **Stack**
 - Stack uses Last In First Out (LIFO)
+
+**QForms: Queue from Two Stacks**
+- Adding it will be simple
+- Removing requires moving items in stack A to stack B. then get the last item of Stack B. After that return the rest of the item to stack A. Peek is similar
+```
+const Stack = require("./stack");
+class Queue {
+  constructor() {
+    this.s1 = new Stack();
+    this.s2 = new Stack();
+  }
+
+  add(record) {
+    this.s1.add(record)
+  }
+
+  remove() {
+    while (this.s1.peek()) {
+      this.s2.add(this.s1.remove())
+    }
+    const record = this.s2.remove()
+    while (this.s2.peek()) {
+      this.s1.add(this.s2.remove())
+    }
+    return record
+  }
+
+  peek() {
+    while (this.s1.peek()) {
+      this.s2.add(this.s1.remove())
+    }
+    const record = this.s2.peek()
+    while (this.s2.peek()) {
+      this.s1.add(this.s2.remove())
+    }
+    return record
+  }
+}
+```

@@ -3,11 +3,11 @@ class Stack {
     this.data = [];
   }
 
-  push(record) {
+  add(record) {
     this.data.push(record);
   }
 
-  pop() {
+  remove() {
     return this.data.pop();
   }
 
