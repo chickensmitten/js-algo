@@ -10,6 +10,7 @@ Companion repo to [The Coding Inteview Bootcamp: Algorithms + Data Structures](h
   - press `c` until you hit the code with `debugger;`, then test the code
   - to inspect a variable, we have to enter REPL mode by running `repl`
   - to exit use ctrl + c
+- use `.skip` to skip some jest tests
 
 ## Interesting methods
 
@@ -189,41 +190,7 @@ fib = memoize(fib);
 **QForms: Queue from Two Stacks**
 - Adding it will be simple
 - Removing requires moving items in stack A to stack B. then get the last item of Stack B. After that return the rest of the item to stack A. Peek is similar
-```
-const Stack = require("./stack");
-class Queue {
-  constructor() {
-    this.s1 = new Stack();
-    this.s2 = new Stack();
-  }
-
-  add(record) {
-    this.s1.add(record)
-  }
-
-  remove() {
-    while (this.s1.peek()) {
-      this.s2.add(this.s1.remove())
-    }
-    const record = this.s2.remove()
-    while (this.s2.peek()) {
-      this.s1.add(this.s2.remove())
-    }
-    return record
-  }
-
-  peek() {
-    while (this.s1.peek()) {
-      this.s2.add(this.s1.remove())
-    }
-    const record = this.s2.peek()
-    while (this.s2.peek()) {
-      this.s1.add(this.s2.remove())
-    }
-    return record
-  }
-}
-```
+- Refer to [this for solution](/exercises/qfroms/index.js)
 
 **Linked Lists**
 - Anatomy of Linked Lists
@@ -231,3 +198,4 @@ class Queue {
 - Linked Lists with code
 ![linked lists with code](/public/21_linked_lists_in_code.png)
 - For Linked Lists documentation refer to [/exercises/linkedlist](/exercises/linkedlist/directions.html) or [Linked lists in markdown](/public/linked_lists.md)
+- 
