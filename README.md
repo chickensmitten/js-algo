@@ -230,4 +230,4 @@ class Queue {
 ![anatomy of linked lists](/public/21_anatomy_of_linked_lists.png)
 - Linked Lists with code
 ![linked lists with code](/public/21_linked_lists_in_code.png)
-- For Linked Lists documentation refer to `/exercises/linkedlist` or [Linked lists in markdown](/public/linked_lists.md)
+- For Linked Lists documentation refer to [/exercises/linkedlist](/exercises/linkedlist/directions.html) or [Linked lists in markdown](/public/linked_lists.md)
