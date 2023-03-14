@@ -296,3 +296,11 @@ function midpoint(list) {
 - find the node nth from the last node
 - ![fromtlast](/public/24_fromlast.png)
 - create slow and fast node where fast moves by nth step first. Then slow and fast increments together by 1.
+
+**Tree**
+- ![trees overview](/public/25_tree_overview.png)
+- Trees have parents, children and siblings
+- Breath first traversal
+![breath traversal](/public/25_breadth_traversal.png)
+- Depth first traversal
+![depth traversal](/public/25_depth_traversal.png)
