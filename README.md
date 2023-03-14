@@ -271,3 +271,23 @@ for(let value of tree.printValues()) {
 }
 values;
 ```
+
+**Midpoint**
+- find midpoint without using counter or getting size divided by 2.
+- create a race condition where a slow loop increments by one while the other fast increments by two. loop through this race condition until fast hits the end, the current position of the slow is where the mid point is. Because slow is moving half as fast
+```
+function midpoint(list) {
+  let slow = list.getFirst();
+  let fast = list.getFirst();
+  while (fast.next && fast.next.next) {
+    slow = slow.next;
+    fast = fast.next.next;
+  }
+  return slow;
+}
+```
+
+**Circular Lists**
+- circular lists are lists that has no end.
+- ![circular lists](/public/23_circular_lists.png)
+- this can be done with the code similar to midpoint. when the slow meets the fast, we will know that the list is circular.
