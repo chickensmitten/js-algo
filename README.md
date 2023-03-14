@@ -198,4 +198,76 @@ fib = memoize(fib);
 - Linked Lists with code
 ![linked lists with code](/public/21_linked_lists_in_code.png)
 - For Linked Lists documentation refer to [/exercises/linkedlist](/exercises/linkedlist/directions.html) or [Linked lists in markdown](/public/linked_lists.md)
-- 
+- This exercise also teaches to reuse code.
+
+**Generators in Javascript with Yield statements**
+- Why is it useful? It can create tree structures with `yield`. i.e. Merkle Tree etc
+- characteristics of `yield` statement.
+```
+function * list() {
+  yield 1;
+  yield 2;
+  yield 3;
+  yield 4;
+  yield 5;
+}
+
+const generator = list();
+generator.next(); // returns {"value": 1, "done": false}
+generator.next(); // returns {"value": 2, "done": false}
+generator.next(); // returns {"value": 3, "done": false}
+generator.next(); // returns {"value": 4, "done": false}
+generator.next(); // returns {"value": 5, "done": false}
+generator.next(); // returns {"done": true}
+```
+- Another example
+```
+function * numbers() {
+  yield 1;
+  yield 2;
+  yield * moreNumbers();
+  yield 4;
+  yield 5;
+}
+
+function *moreNumbers() {
+  yield 3;
+  yield 4;
+  yield 5;
+}
+
+const generator = numbers();
+
+const values = [];
+for (let value of generator) {
+  numbers.push(value);
+}
+numbers;
+```
+- using `yield` for Tree structures
+```
+class Tree {
+  constructor(value = null, children = []) {
+    this.value = value;
+    this.children = children;
+  }
+
+  *printValues() {
+    yield this.value;
+    for(let child of this.children) {
+      yield* child.printValues();
+    }
+  }
+}
+
+const tree = new Tree(1, [
+  new Tree(2, [new Tree(4)]),
+  new Tree(3)
+]);
+
+const values = [];
+for(let value of tree.printValues()) {
+  values.push(value);
+}
+values;
+```
