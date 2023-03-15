@@ -29,16 +29,26 @@ class Node {
 }
 
 class Tree {
-  constructor(root) {
+  constructor() {
     this.root = null;
   }
 
-  traverseBFS() {
-
+  traverseBFS(fn) {
+    const arr = [this.root];
+    while (arr.length) {
+      const node = arr.shift();
+      arr.push(...node.children);
+      fn(node);
+    }
   }
 
-  traverseDFS() {
-
+  traverseDFS(fn) {
+    const arr = [this.root];
+    while (arr.length) {
+      const node = arr.shift();
+      arr.unshift(...node.children);
+      fn(node);
+    }
   }
 }
 

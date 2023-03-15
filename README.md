@@ -301,6 +301,46 @@ function midpoint(list) {
 - ![trees overview](/public/25_tree_overview.png)
 - Trees have parents, children and siblings
 - Breath first traversal
-![breath traversal](/public/25_breadth_traversal.png)
+  - ![breath traversal](/public/25_breadth_traversal.png)
+  - Breath first traversal using code:
+    0. initialize an array
+    1. get the root node `push` into the array,
+    2. get the children of root node aka 1st children layer, take out the root node, while pushing the children into the array
+    3. get the 2nd children layer of the 1st child node (if any), take out the 1st children layer, `push` the 2nd children layer into the array
+    4. Repeat step 3 with the rest of the 1st children layer. go down the layers if necessary.
+  - example code
+  ```
+  traverseBFS(fn) {
+    const arr = [this.root];
+    while (arr.length) {
+      const node = arr.shift();
+      arr.push(...node.children);
+      fn(node);
+    }
+  }
+  ```
 - Depth first traversal
-![depth traversal](/public/25_depth_traversal.png)
+  - ![depth traversal](/public/25_depth_traversal.png)
+  - Depth first traversal using code:
+    0. initialize an array
+    1. get the root node `unshift` into the array,
+    2. get the children of root node aka 1st children layer, take out the root node, while unshifting the children into the array
+    3. get the 2nd children layer of the 1st child node (if any), take out the 1st children layer, `unshift` the 2nd children layer into the array
+    4. Repeat step 3 with the rest of the 1st children layer. go down the layers if necessary.  
+  - example code:
+  ```
+  traverseDFS(fn) {
+    const arr = [this.root];
+    while (arr.length) {
+      const node = arr.shift();
+      arr.unshift(...node.children);
+      fn(node);
+    }
+  }  
+  ```
+
+**Level Width**
+- ![level width](/public/26_level_width.png)
+- counters are to keep count of how many nodes per level
+- array is the queue that handles the nodes being pushed in and shifted out.
+- 's' is the marker/breaker that indicates a new level. Also acts as a stopper.
